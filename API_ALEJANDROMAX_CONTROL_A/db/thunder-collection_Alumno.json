@@ -1,0 +1,61 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Alumno",
+    "dateExported": "2024-02-23T17:45:36.924Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "46db8020-6186-477f-9f03-ab2e0bc2c2fd",
+            "colId": "f8520c11-6a17-4709-b722-ef5394970971",
+            "containerId": "",
+            "name": "alumnoPost",
+            "url": "http://localhost:3000/api/alumno",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-23T16:30:35.701Z",
+            "modified": "2024-02-23T17:18:11.736Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Jose Soto\",\n  \"correo\":\"jsoto@kinal.edu.gt\",\n  \"password\":\"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6ae2e229-4f3b-405f-aa1d-2608c789f94a",
+            "colId": "f8520c11-6a17-4709-b722-ef5394970971",
+            "containerId": "",
+            "name": "alumnoPut",
+            "url": "http://localhost:3000/api/alumno/65d8cdea2bad7e812301c465",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-02-23T17:11:58.473Z",
+            "modified": "2024-02-23T17:14:39.241Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"Alejandro Max\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "85f92788-e748-4f1d-a622-28267a940fd9",
+            "colId": "f8520c11-6a17-4709-b722-ef5394970971",
+            "containerId": "",
+            "name": "alumnoDelete",
+            "url": "http://localhost:3000/api/alumno/65d8d3531e7967a837f57d15",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-02-23T17:17:15.665Z",
+            "modified": "2024-02-23T17:18:33.403Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
