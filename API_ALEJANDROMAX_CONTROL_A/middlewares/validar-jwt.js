@@ -1,41 +1,62 @@
 const jwt = require("jsonwebtoken");
-const Usuario = require("../models/usuario");
+const Profesor = require("../models/profesor");
+const Alumno = require("../models/alumno");
 
 const validarJWT = async (req, res, next) => {
   const token = req.header("x-token");
 
   if (!token) {
-    return res.status(401).json({
-      msg: "No hay token en la petición",
-    });
+      return res.status(401).json({
+          msg: 'No hay token'
+      })
   }
 
   try {
-    const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
-    const usuario = await Usuario.findById(uid);
-    
-    if (!usuario) {
-      return res.status(401).json({
-        msg: "Usuario no existe en la base de datos",
-      });
-    }
-    
-    if (!usuario.estado) {
-      return res.status(401).json({
-        msg: "Token no válido - usuario con estado:false",
-      });
-    }
-    req.usuario = usuario;
 
-    next();
-  } catch (e) {
-    console.log(e),
-      res.status(401).json({
-        msg: "Token no válido",
-      });
+      const { uid } = jwt.verify(token, process.env.SECRETORPRIVATEKEY);
+      const profesor = await Profesor.findById(uid);
+      const alumno = await Alumno.findById(uid);
+
+      if(profesor){
+          if (!profesor) {
+              return res.status(400).json({
+                  msg: 'El profesor no existe'
+              });
+          }
+          if (!profesor.estado) {
+              return res.status(401).json({
+                  msg: 'Token no valido, profesor con estado: false'
+              })
+          }
+          if (profesor) {
+              req.profesor = profesor;
+              req.correo = profesor.correo;
+          }
+      }else{
+          if (!alumno) {
+              return res.status(400).json({
+                  msg: 'El alumno no existe'
+              });
+          }
+          if (!alumno.estado) {
+              return res.status(401).json({
+                  msg: 'Token no valido, alumno con estado: false'
+              })
+          }
+          if (alumno) {
+              req.alumno = alumno;
+          }
+      }
+      next();
+  } catch (error) {
+
+      console.log(error);
+      return res.status(401).json({
+          msg: 'Token no valido'
+      })
   }
-};
+}
 
 module.exports = {
-  validarJWT,
-};
+  validarJWT
+}

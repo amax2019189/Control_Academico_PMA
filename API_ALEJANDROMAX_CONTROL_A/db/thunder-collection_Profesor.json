@@ -1,0 +1,28 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Profesor",
+    "dateExported": "2024-02-23T21:18:23.557Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "6aa76a0f-0fa4-4c3b-a4c6-33a3e2974961",
+            "colId": "c4bc70f2-9f8a-4534-a3a4-48bc5db9829b",
+            "containerId": "",
+            "name": "profesorPost",
+            "url": "http://localhost:3000/api/profesor",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-23T21:06:29.041Z",
+            "modified": "2024-02-23T21:13:12.732Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Marcos Perez\",\n  \"correo\": \"mperez@kinal.edu.gt\",\n  \"password\": \"654321\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

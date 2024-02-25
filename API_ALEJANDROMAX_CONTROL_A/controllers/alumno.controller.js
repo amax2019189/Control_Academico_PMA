@@ -7,7 +7,8 @@ const alumnoPost = async (req, res) => {
     const alumno = new Alumno({nombre, correo, password });
 
     const salt = bcryptjs.genSaltSync();
-
+    alumno.password = bcryptjs.hashSync(password, salt);
+    
     await alumno.save();
     res.status(200).json({
         alumno

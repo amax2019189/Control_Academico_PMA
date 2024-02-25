@@ -9,6 +9,10 @@ const ProfesorSchema = Schema ({
         type: String,
         required: [true, 'El correo es obligatorio']
     },
+    curso: [{
+        type: String,
+        require: [true, 'El curso es obligatorio'] 
+    }],
     password: {
         type: String,
         required: [true, 'El password es obligatorio']
@@ -29,10 +33,10 @@ const ProfesorSchema = Schema ({
     }
 });
 
-ProfesorSchema.methods.toJSON = function(){
+/*ProfesorSchema.methods.toJSON = function(){
     const { __v, password, _id, ...profesor} = this.toObject();
     profesor.uid = _id;
     return profesor;
-}
+}*/
 
 module.exports = model('Profesor', ProfesorSchema);
