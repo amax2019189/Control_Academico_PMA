@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Cursos",
+    "dateExported": "2024-02-26T03:39:50.012Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "700ab240-5166-4f71-9083-a08a927edf37",
+            "colId": "2b453fb2-ad31-42f9-90fc-aebd64134a45",
+            "containerId": "",
+            "name": "cursosPut",
+            "url": "http://localhost:3000/api/curso/65dbe2935a7a817b96ae1022",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-02-26T01:00:37.615Z",
+            "modified": "2024-02-26T03:22:01.876Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "$2a$10$VvOGEdgdzVtMWahkYt9jFu/1HQGPGjYdkgtPX5CUz7.UFDO2RSOFm"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"descripcion\": \"educacion matematica basica\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "75c3c7fa-9329-4225-8674-1c665ef23609",
+            "colId": "2b453fb2-ad31-42f9-90fc-aebd64134a45",
+            "containerId": "",
+            "name": "cursosPost",
+            "url": "http://localhost:3000/api/curso",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-26T01:00:37.616Z",
+            "modified": "2024-02-26T03:35:20.867Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "$2a$10$Ty/fqzTHIdGOPgzCxmRESu1XaOBxvcyrXSuiKfOQU6HOZA9wIU4t2"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"Practica Supervisada\",\n  \"descripcion\": \"Se realizan practicas\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3ba603b8-bc23-419a-8143-a76b0c27b7cb",
+            "colId": "2b453fb2-ad31-42f9-90fc-aebd64134a45",
+            "containerId": "",
+            "name": "cursosGet",
+            "url": "http://localhost:3000/api/curso",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-26T01:00:37.617Z",
+            "modified": "2024-02-26T01:29:44.795Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a4080681-e27e-4c28-9646-10a631d575f3",
+            "colId": "2b453fb2-ad31-42f9-90fc-aebd64134a45",
+            "containerId": "",
+            "name": "cursosDelete",
+            "url": "http://localhost:3000/api/curso/65dbe2935a7a817b96ae1022",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-26T01:00:37.618Z",
+            "modified": "2024-02-26T03:22:27.222Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "$2a$10$VvOGEdgdzVtMWahkYt9jFu/1HQGPGjYdkgtPX5CUz7.UFDO2RSOFm"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "bfe1853a-f0c4-4e6e-a79b-e138086b3954",
+            "colId": "2b453fb2-ad31-42f9-90fc-aebd64134a45",
+            "containerId": "",
+            "name": "cursosProfesorGet",
+            "url": "http://localhost:3000/api/curso/profesor",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-02-26T01:00:37.619Z",
+            "modified": "2024-02-26T03:22:35.539Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "$2a$10$VvOGEdgdzVtMWahkYt9jFu/1HQGPGjYdkgtPX5CUz7.UFDO2RSOFm"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

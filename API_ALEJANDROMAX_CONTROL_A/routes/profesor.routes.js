@@ -13,9 +13,7 @@ router.post(
     [
         check("nombre","El nombre es obligatorio").not().isEmpty(),
         check("correo","La especie es obligatorio"),
-        check("curso","El curso es necesario"),
         check("password","Password es necesario"),
-        check("curso").custom(existenteEmail),
         validarCampos
     ], profesorPost);
 

@@ -5,18 +5,18 @@ const CursoSchema = Schema ({
         type: String,
         required: [true, 'El nombre es obligatorio']
     },
-    detalle: {
+    descripcion: {
         type: String,
-        required: [true, 'El detalle es obligatorio']
+        required: [true, 'La descripción es obligatorio']
     },
-    acceso: {
+    curso: {
         type: String,
-        required: [true, 'El codigo de acceso es obligatorio']
+        required: [true, 'El curso es obligatorio']
     },
-    profesor: {
+    token: {
         type: Schema.Types.ObjectId,
-        ref: 'Profesor', 
-        required: [true, 'El profesor es obligatorio']
+        ref: 'Profesor',
+        require: [true, 'El token es necesario']
     },
     estado: {
         type: String,

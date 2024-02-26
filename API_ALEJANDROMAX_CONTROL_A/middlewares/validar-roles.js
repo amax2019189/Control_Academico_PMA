@@ -1,4 +1,4 @@
-const { request, response } = require("express")
+const { request, response, json } = require("express")
 
 const tieneRole = (...roles) => {
     return (req= request, res = response, next ) => {
